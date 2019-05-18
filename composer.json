@@ -1,0 +1,30 @@
+{
+    "name": "sidus/base-serializer-bundle",
+    "description": "Additional serializer features for Symfony 3 & 4",
+    "keywords": [
+        "symfony",
+        "serializer",
+        "base"
+    ],
+    "homepage": "https://github.com/VincentChalnot/SidusBaseSerializerBundle",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vincent Chalnot",
+            "email": "vincent@sidus.fr",
+            "homepage": "http://chalnot.fr",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Sidus\\BaseSerializerBundle\\": ""
+        }
+    },
+    "require": {
+        "php": ">=5.6",
+        "sidus/base-bundle": "1.0.*",
+        "symfony/serializer": ">2.4,<5.0"
+    }
+}

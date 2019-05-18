@@ -1,0 +1,12 @@
+services:
+    Sidus\BaseSerializerBundle\Serializer\Normalizer\NestedPropertyDenormalizer:
+        class: Sidus\BaseSerializerBundle\Serializer\Normalizer\NestedPropertyDenormalizer
+        public: false
+        arguments:
+            - '@serializer.mapping.class_metadata_factory'
+            - ~
+            - '@?property_info'
+        calls:
+            - [setAnnotationReader, ['@annotations.reader']]
+        tags:
+            - { name: serializer.normalizer, priority: -999 }

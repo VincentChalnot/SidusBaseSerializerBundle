@@ -1,0 +1,12 @@
+services:
+    Sidus\BaseSerializerBundle\Serializer\MaxDepthHandler:
+        class: Sidus\BaseSerializerBundle\Serializer\MaxDepthHandler
+        public: false
+
+    Sidus\BaseSerializerBundle\Serializer\CircularReferenceHandler:
+        class: Sidus\BaseSerializerBundle\Serializer\CircularReferenceHandler
+        public: false
+
+    Sidus\BaseSerializerBundle\Serializer\ByReferenceHandler:
+        class: Sidus\BaseSerializerBundle\Serializer\ByReferenceHandler
+        public: false

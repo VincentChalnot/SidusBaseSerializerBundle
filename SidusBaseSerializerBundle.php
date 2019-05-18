@@ -15,6 +15,6 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
 /**
  * @author Vincent Chalnot <vincent@sidus.fr>
  */
-class SidusBaseBundle extends Bundle
+class SidusBaseSerializerBundle extends Bundle
 {
 }

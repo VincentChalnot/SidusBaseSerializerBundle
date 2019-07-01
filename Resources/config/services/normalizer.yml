@@ -10,3 +10,15 @@ services:
             - [setAnnotationReader, ['@annotations.reader']]
         tags:
             - { name: serializer.normalizer, priority: -999 }
+
+    Sidus\BaseSerializerBundle\Serializer\Normalizer\PropertyNormalizer:
+        class: Sidus\BaseSerializerBundle\Serializer\Normalizer\PropertyNormalizer
+        public: false
+        arguments:
+            - '@serializer.mapping.class_metadata_factory'
+            - ~
+            - '@?property_info'
+        calls:
+            - [setAnnotationReader, ['@annotations.reader']]
+        tags:
+            - { name: serializer.normalizer, priority: -999 }

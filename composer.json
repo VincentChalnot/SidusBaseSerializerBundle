@@ -24,7 +24,7 @@
     },
     "require": {
         "php": ">=5.6",
-        "sidus/base-bundle": "1.0.*",
+        "sidus/base-bundle": "~1.0",
         "symfony/serializer": ">2.4,<5.0"
     }
 }

@@ -128,7 +128,11 @@ class NestedPropertyDenormalizer extends PropertyNormalizer
         $values = [];
         /** @var array $value */
         foreach ($value as $item) {
-            $values[] = $this->serializer->denormalize($item, $nestedClassAnnotation->targetClass);
+            // Don't know why but sometimes it's already denormalized:
+            if (!is_a($item, $nestedClassAnnotation->targetClass)) {
+                $item = $this->serializer->denormalize($item, $nestedClassAnnotation->targetClass);
+            }
+            $values[] = $item;
         }
 
         return $values;

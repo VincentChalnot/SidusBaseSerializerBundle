@@ -22,3 +22,11 @@ services:
             - [setAnnotationReader, ['@annotations.reader']]
         tags:
             - { name: serializer.normalizer, priority: -999 }
+
+    Sidus\BaseSerializerBundle\Serializer\Normalizer\DateTimeNormalizer:
+        class: Sidus\BaseSerializerBundle\Serializer\Normalizer\DateTimeNormalizer
+        public: false
+        arguments:
+            - '@serializer.normalizer.datetime'
+        tags:
+            - { name: serializer.normalizer, priority: -900 }
